@@ -155,6 +155,7 @@ class DriverStatus():
       self.active_monitoring_mode = False
 
   def _is_driver_distracted(self, pose, blink):
+    return DistractedType.NOT_DISTRACTED
     if not self.pose_calibrated:
       pitch_error = pose.pitch - _PITCH_NATURAL_OFFSET
       yaw_error = pose.yaw - _YAW_NATURAL_OFFSET
